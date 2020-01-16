@@ -1,6 +1,6 @@
 # Exercise csv2config
 
-The script csv2config shout take the data from a csv file and generate for each entry a configuration file.
+The script csv2config should take the data from a csv file and generate for each entry a configuration file.
 
 ## ToDo1
 
