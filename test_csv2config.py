@@ -9,7 +9,7 @@ def test_csv_import(tmpdir):
             'test21,test22\n')
     data = csv2config.csv_import(str(p))
     assert len(data) == 2
-    assert data == [{'header1': 'test11', 'header2': 'test12'}, 
+    assert data == [{'header1': 'test11', 'header2': 'test12'},
                     {'header1': 'test21', 'header2': 'test22'}]
 
 
@@ -42,6 +42,6 @@ def test_write_file(tmpdir):
     tmpdir.chdir()
     csv2config.write_files(text_list)
     for i, text in list(enumerate(text_list, start=1)):
-        f = tmpdir.join('file{:02d}.md'.format(i))
+        f = tmpdir.join(f'file{i:02d}.md')
         assert f.read() == text
     assert len(tmpdir.listdir()) == len(text_list)

@@ -12,7 +12,7 @@ Create a script `yaml2config.py` equivalent to the `csv2config.py` script.
 
 ## ToDo3 (optional)
 
-Use the `argparse` module (https://docs.python.org/3/library/argparse.html) to make the scrips better usable from the command line.
+Use the `argparse` module (<https://docs.python.org/3/library/argparse.html)> to make the scrips better usable from the command line.
 
 ## Setup
 
@@ -43,4 +43,4 @@ $ source .venv/bin/activate
 ```
 
 PEP8 = Style Guide for Python Code
-https://www.python.org/dev/peps/pep-0008/
+<https://www.python.org/dev/peps/pep-0008/>

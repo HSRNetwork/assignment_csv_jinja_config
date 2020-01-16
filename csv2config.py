@@ -24,7 +24,7 @@ def render_template(file_name, data_list):
 
     :param file_name: jinja2 template file
     :param data_list: list with data for every device
-    :return: list_rendered_templates: list of rendered templates (configuration)
+    :return: list_rendered_templates: list of rendered templates (config)
     """
     list_rendered_templates = []
 
