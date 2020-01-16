@@ -20,14 +20,16 @@ def test_render_template(tmpdir):
         'ip': '10.10.10.10',
         'mask': '255.255.255.0'
     }
-    p = tmpdir.join('template.j2')
+    tmpdir.chdir()
+    tmpfile = 'template.j2'
+    p = tmpdir.join(tmpfile)
     p.write('!\n'
             'logging host {{ logging_host }}\n'
             'hostname {{ hostname }}\n'
             'int eth0\n'
             'ip address {{ ip }} {{ mask }}\n'
             '!')
-    data = csv2config.render_template(str(p), [context])
+    data = csv2config.render_template(tmpfile, [context])
     result = ('!\n'
               'logging host 1.1.1.1\n'
               'hostname testnode\n'
