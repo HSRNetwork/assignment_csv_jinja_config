@@ -20,11 +20,11 @@ def csv_import(file_name):
 
 def render_template(file_name, data_list):
     """
-    Render a template for all devices.
+    Render the template for each device.
 
     :param file_name: jinja2 template file
     :param data_list: list with data for every device
-    :return: list_rendered_templates: all rendered texts in a list
+    :return: list_rendered_templates: list of rendered templates (configuration)
     """
     list_rendered_templates = []
 
@@ -37,10 +37,10 @@ def render_template(file_name, data_list):
 
 def write_files(content_list):
     """
-    Takes a list of texts and create for every text a file.
+    Takes a list of strings and write for every string a file.
     ['asdf', 'qwerz'] creates file01.md and file02.md including the content.
 
-    :param content_list: list of texts
+    :param content_list: list of strings
     :return: None
     """
 

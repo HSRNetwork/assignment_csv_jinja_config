@@ -1,15 +1,16 @@
-from . import csv2config
+import csv2config
 import pytest
 
 
 def test_csv_import(tmpdir):
     p = tmpdir.join('test.csv')
-    p.write('a,b\n'
-            'c,d\n'
-            'e,f\n')
+    p.write('header1,header2\n'
+            'test11,test12\n'
+            'test21,test22\n')
     data = csv2config.csv_import(str(p))
     assert len(data) == 2
-    assert data == [{'a': 'c', 'b': 'd'}, {'a': 'e', 'b': 'f'}]
+    assert data == [{'header1': 'test11', 'header2': 'test12'}, 
+                    {'header1': 'test21', 'header2': 'test22'}]
 
 
 def test_render_template(tmpdir):
